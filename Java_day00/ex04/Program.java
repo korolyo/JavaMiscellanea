@@ -2,6 +2,39 @@ import java.util.*;
 
 public class Program {
 
+    private static void printChart(char[] topTen, byte[] uArray) {
+        short max = uArray[topTen[0]];
+        byte maxHeight = (byte) (max <= 10 ? max : 10);
+        byte totalLines = (byte) (2 + maxHeight);
+        byte[] graphs = new byte[10];
+
+        for (int i = 0; i < 10; i++) {
+            if (max <= 10) {
+                graphs[i] = (byte) uArray[topTen[i]];
+            } else {
+                graphs[i] = (byte) (uArray[topTen[i]] * 10 / max);
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < totalLines; i++) {
+            for (int j = 0; j < 10; j++) {
+                if (topTen[j] != 0) {
+                    if (i + graphs[j] + 2 == totalLines) {
+                        System.out.printf("%3d", uArray[topTen[j]]);
+                    } else if (i == totalLines - 1) {
+                        System.out.printf("%3c", topTen[j]);
+                    } else if (i + graphs[j] >= maxHeight) {
+                        System.out.printf("%3c", '#');
+                    }
+                    if (j != 10 - 1 && topTen[j + 1] != 0 && i + graphs[j + 1] >= maxHeight) {
+                        System.out.printf("%c", ' ');
+                    }
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public static void parseInput(char[] c, byte[] uArray, int len) {
         int i = 0;
 
