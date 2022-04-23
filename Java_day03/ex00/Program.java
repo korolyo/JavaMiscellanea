@@ -4,7 +4,7 @@ public class Program  implements Runnable {
     private String message;
 
     private static int countNum;
-    private static final String USAGE = "Try again:/njava Program --count=[int>0]";
+    private static final String USAGE = "Try again: \n java Program --count=[int>0]";
 
     public static void main(String[] args) throws InterruptedException {
 
