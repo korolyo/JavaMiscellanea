@@ -1,6 +1,6 @@
-package ImagesToChar.src.java.edu.school21.printer.app;
+package edu.school21.printer.app;
 
-import ImagesToChar.src.java.edu.school21.printer.logic.Logic;
+import edu.school21.printer.logic.Logic;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ public class Program {
 
         char w = args[0].charAt(0);
         char b = args[1].charAt(0);
-        String filename = "/Users/acollin/Desktop/JavaMiscellanea/Java_day04/ex01/ImagesToChar/src/resources/image.bmp";
+        String filename = new String("/Users/acollin/Desktop/JavaMiscellanea/Java_day04/ex01/ImagesToChar/src/resources/image.bmp");
 
         int[][] array2D = Logic.BMPToArray(filename, w, b);
 

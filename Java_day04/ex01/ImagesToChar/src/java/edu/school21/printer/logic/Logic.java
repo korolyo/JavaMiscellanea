@@ -1,4 +1,4 @@
-package ImagesToChar.src.java.edu.school21.printer.logic;
+package edu.school21.printer.logic;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -8,9 +8,9 @@ import java.io.IOException;
 
 public class Logic {
 
-    public static int[][] BMPToArray(String BMPFilename, char b, char w) throws IOException {
+    public static int[][] BMPToArray(String BMPFilename, char w, char b) throws IOException {
 
-        BufferedImage image = ImageIO.read(Logic.class.getResource("/resourse/image.bmp"));
+        BufferedImage image = ImageIO.read(Logic.class.getResource("/resources/image.bmp"));
 
         int [][] array2D = new int[image.getWidth()][image.getHeight()];
 
