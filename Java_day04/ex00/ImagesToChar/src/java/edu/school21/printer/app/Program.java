@@ -6,7 +6,7 @@ import java.io.*;
 
 public class Program {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
 
         if (args.length != 3) {
             System.out.println("Try again.\nWrong number of arguments");
@@ -19,9 +19,9 @@ public class Program {
 
         int[][] array2D = Logic.BMPToArray(filename, w, b);
 
-        for (int x = 0; x < array2D.length; x++) {
-            for (int y = 0; y < array2D[x].length; y++) {
-                System.out.println((char)array2D[y][x]);
+        for (int y = 0; y < array2D.length; y++) {
+            for (int x = 0; x < array2D[y].length; x++) {
+                System.out.print((char)array2D[y][x]);
             }
             System.out.println();
         }
