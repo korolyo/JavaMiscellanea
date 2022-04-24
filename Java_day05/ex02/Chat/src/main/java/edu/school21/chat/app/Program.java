@@ -1,3 +1,5 @@
+:package edu.school21.chat.app;
+
 import java.util.*;
 import java.io.*;
 
