@@ -1,7 +1,6 @@
 package edu.school21.chat.repositories;
 
 public class MessagesRepository {
-    public static void main(String[] args) {
-        
-    }
+
+    Optional<Message> findById(long message_id) throws SQLException;
 }
