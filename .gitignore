@@ -29,6 +29,5 @@ hs_err_pid*
 ./build/
 .vscode*
 .idea
-.gitignore
 LICENSE
 README.md
