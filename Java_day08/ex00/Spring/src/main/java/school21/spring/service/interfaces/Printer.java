@@ -1,5 +1,8 @@
 package school21.spring.service.interfaces;
 
-public class Printer {
+public interface Printer {
+    public void setPrefix(String text);
+    public void print(String text);
 
+    void print();
 }

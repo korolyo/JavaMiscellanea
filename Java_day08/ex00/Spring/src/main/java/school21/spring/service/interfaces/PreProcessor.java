@@ -1,5 +1,5 @@
 package school21.spring.service.interfaces;
 
-public class PreProcessor {
-
+public interface PreProcessor {
+    public String process(String text);
 }

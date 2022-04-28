@@ -2,6 +2,6 @@ package school21.spring.service.models;
 
 import school21.spring.service.interfaces.Printer;
 
-public class PrinterWithPrefixImpl extends Printer {
+public class PrinterWithPrefixImpl implements Printer {
 
 }
