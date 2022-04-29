@@ -1,17 +1,17 @@
 package school21.spring.service.application;
 
-import school21.spring.service.interfaces.PreProcessor;
-import school21.spring.service.interfaces.Renderer;
-import school21.spring.service.models.PreProcessorToUpperImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import school21.spring.service.models.PrinterWithPrefixImpl;
-import school21.spring.service.models.RendererErrImpl;
 
 public class Main {
+
     public static void main(String[] args) {
-        PreProcessor preProcessor = new PreProcessorToUpperImpl();
-        Renderer renderer = new RendererErrImpl(preProcessor);
-        PrinterWithPrefixImpl printer = new PrinterWithPrefixImpl(renderer);
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("context.xml");
+        PrinterWithPrefixImpl printer = applicationContext.getBean("printerWithPrefix", PrinterWithPrefixImpl.class);
+
         printer.setPrefix("Prefix");
         printer.print("Hello!");
+
     }
 }

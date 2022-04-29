@@ -1,7 +1,11 @@
 package school21.spring.service.repositories;
 
-public class CrudRepository {
-    public static void main(String[] args) {
-        
-    }
+import java.util.List;
+
+public interface CrudRepository<T> {
+    T findById(Long id);
+    List<T> findAll();
+    void save(T entity);
+    void update(T entity);
+    void delete(Long id);
 }

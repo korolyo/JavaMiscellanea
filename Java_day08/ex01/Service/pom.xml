@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Tests</groupId>
-    <artifactId>Java_day06</artifactId>
+    <groupId>Service</groupId>
+    <artifactId>Java_day08</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -15,6 +15,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
+<dependencies>
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
     <dependency>
         <groupId>org.springframework</groupId>
@@ -36,6 +37,11 @@
         <version>5.3.19</version>
     </dependency>
 
+    <dependency>
+        <groupId>com.zaxxer</groupId>
+        <artifactId>HikariCP</artifactId>
+        <version>3.4.5</version>
+    </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
     <dependency>
