@@ -1,6 +1,7 @@
-package edu.school21.sockets.repositories;
+package Chat.SocketServer.src.main.java.edu.school21.sockets.repositories;
 
 import edu.school21.sockets.models.User;
+import edu.school21.sockets.repositories.CrudRepository;
 
 import java.util.Optional;
 
