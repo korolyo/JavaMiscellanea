@@ -1,7 +1,7 @@
-package school21.spring.service.repositories;
+package edu.school21.sockets.repositories;
 
 import com.zaxxer.hikari.HikariDataSource;
-import school21.spring.service.models.User;
+import edu.school21.sockets.models.User;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class UsersRepositoryJdbcImpl implements UsersRepository{
+public class UsersRepositoryImpl implements UsersRepository {
 
     DataSource dataSource;
 
-    public UsersRepositoryJdbcImpl(HikariDataSource dataSource) {
+    public UsersRepositoryImpl(HikariDataSource dataSource) {
         this.dataSource = dataSource;
     }
 

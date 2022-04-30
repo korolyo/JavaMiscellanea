@@ -1,4 +1,4 @@
-package school21.spring.service.repositories;
+package edu.school21.sockets.repositories;
 
 import java.util.List;
 
