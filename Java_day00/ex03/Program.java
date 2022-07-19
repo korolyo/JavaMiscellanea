@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Program {
 
@@ -7,6 +7,7 @@ public class Program {
             if (str.equals("Week " + count))
                 return 1;
         }
+
         return 0;
     }
 
@@ -18,10 +19,12 @@ public class Program {
             System.out.print("Week " + i);
             gradeMin = grades % 10;
             grades /= 10;
+
             while (gradeMin != 0) {
                 System.out.print("=");
                 gradeMin--;
             }
+
             i++;
             System.out.println(">");
         }
@@ -37,6 +40,7 @@ public class Program {
             grades = grades * 10 + num;
             reverseGrades /= 10;
         }
+
         return grades;
     }
 
@@ -51,24 +55,27 @@ public class Program {
 
         while (true) {
             Scanner scanner = new Scanner(System.in);
-            System.out.print("->");
             str = scanner.nextLine();
+
             if (str.equals("42"))
                 break;
             else if (checkLine(str, count) == 0) {
                 System.err.println("IllegalArgument");
                 System.exit(-1);
             }
+
             count++;
-            System.out.print("->");
             tmp = 9;
+
             for (int i = 0; i < 5; i++) {
                 input = scanner.nextInt();
                 if (tmp > input)
                     tmp = input;
             }
+
             reverseGrades = reverseGrades * 10 + tmp;
         }
+
         grades = reverseLong(reverseGrades);
         printGrades(count, grades);
     }

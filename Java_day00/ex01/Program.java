@@ -1,12 +1,12 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
         int i = 1;
         int steps = 0;
+
         Scanner scanner = new Scanner(System.in);
-        System.out.print("->");
-        int input = scanner.nextInt();
+        int input = Integer.parseInt(scanner.nextLine());
         if (input < 2) {
             System.err.println("IllegalArgument");
             System.exit(-1);

@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Program {
 
@@ -43,12 +43,13 @@ public class Program {
         Scanner scanner = new Scanner(System.in);
 
         while (input != 42) {
-            input = scanner.nextInt();
+            input = Integer.parseInt(scanner.nextLine());
             sum = findSum(input);
             if (isPrime(sum) == 1) {
                 count++;
             }
         }
-        System.out.println("Count of coffee - request - " + count);
+
+        System.out.println("Count of coffee-request - " + count);
     }
 }
