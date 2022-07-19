@@ -1,4 +1,4 @@
-package edu.school21.sockets.app;
+package Chat.SocketServer.src.main.java.edu.school21.sockets.app;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;

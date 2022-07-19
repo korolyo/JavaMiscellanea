@@ -20,10 +20,19 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String signUp(String username, String password) {
-        String hashedPas = passwordEncoder.encode(password);
-        repository.save(new User(null, username, hashedPas));
-        return hashedPas;
+    public boolean signIn(String username, String password) {
+        return false;
     }
 
+    @Override
+    public void saveMessage() {
+
+    }
+
+    @Override
+    public boolean signUp(String username, String password) {
+        String hashedPas = passwordEncoder.encode(password);
+        repository.save(new User(null, username, hashedPas));
+        return true;
+    }
 }

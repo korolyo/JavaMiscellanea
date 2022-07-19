@@ -1,7 +1,8 @@
-package edu.school21.sockets.repositories;
+package Chat.SocketServer.src.main.java.edu.school21.sockets.repositories;
 
 import com.zaxxer.hikari.HikariDataSource;
 import edu.school21.sockets.models.User;
+import edu.school21.sockets.repositories.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;

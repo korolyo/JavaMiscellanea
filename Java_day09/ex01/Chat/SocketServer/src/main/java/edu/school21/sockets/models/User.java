@@ -1,4 +1,4 @@
-package edu.school21.sockets.models;
+package Chat.SocketServer.src.main.java.edu.school21.sockets.models;
 
 public class User {
     Long id = null;
