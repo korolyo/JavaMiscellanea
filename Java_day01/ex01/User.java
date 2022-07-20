@@ -1,9 +1,12 @@
 package ex01;
 
+import ex01.User;
+import ex01.UserIdsGenerator;
+
 public class User {
-    private int identifier;
-    private String name;
-    private int balance;
+    private final int   id;
+    private String      name;
+    private int         balance;
 
     public String getName() {
         return this.name;
@@ -13,12 +16,8 @@ public class User {
         return this.balance;
     }
 
-    public int getIdentifier() {
-        return identifier;
-    }
-
-    public void setIdentifier(int identifier) {
-        this.identifier = identifier;
+    public int getId() {
+        return this.id;
     }
 
     public void setName(String name) {
@@ -26,14 +25,18 @@ public class User {
     }
 
     public void setBalance(int balance) {
-        this.balance = balance;
+        if (balance < 0)
+            this.balance = 0;
+        else
+            this.balance = balance;
     }
 
-    public User(int identifier, String name, int balance) {
-        this.identifier = identifier;
+    public User(String name, int balance) {
+        this.id = UserIdsGenerator.getInstance().generateId();
         this.name = name;
-        this.balance = balance;
         if (balance < 0)
-            System.out.println("Negative balance");
+            this.balance = 0;
+        else
+            this.balance = balance;
     }
 }

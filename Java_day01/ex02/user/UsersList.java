@@ -1,4 +1,6 @@
-package ex02;
+package ex02.user;
+
+import java.util.UUID;
 
 public interface UsersList {
     public void addUser(User user);

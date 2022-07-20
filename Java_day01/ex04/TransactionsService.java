@@ -1,7 +1,11 @@
 package ex04;
 
+import ex04.user.User;
+import ex04.user.UsersList;
+
 public class TransactionsService {
-    UserList users;
+    UsersList users;
+
     public void addUser(User user) {
 
     }

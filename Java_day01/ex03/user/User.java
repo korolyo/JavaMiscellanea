@@ -1,9 +1,9 @@
-package ex00;
+package ex03.user;
 
 public class User {
-    private int     id;
-    private String  name;
-    private int     balance;
+    private final int   id;
+    private String      name;
+    private int         balance;
 
     public String getName() {
         return this.name;
@@ -28,16 +28,8 @@ public class User {
             this.balance = balance;
     }
 
-    public User(int id, String name, int balance) {
-        this.id = id;
-        this.name = name;
-        if (balance < 0)
-            this.balance = 0;
-        else
-            this.balance = balance;
-    }
-
     public User(String name, int balance) {
+        this.id = UserIdsGenerator.getInstance().generateId();
         this.name = name;
         if (balance < 0)
             this.balance = 0;

@@ -1,9 +1,9 @@
-package ex01;
+package ex03.user;
 
 public final class UserIdsGenerator {
 
     private static UserIdsGenerator INSTANCE;
-    private static int id = 1;
+    private static int id = 0;
 
     public static UserIdsGenerator getInstance() {
         if (INSTANCE == null) {

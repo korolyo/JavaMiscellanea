@@ -8,7 +8,7 @@ public class Program {
         User sender = new User(1, "Dmytry", 500);
         User recepient = new User(2, "Saveliy", 1000);
 
-        Transaction fistTransaction = new Transaction(1, sender, recepient, 200);
-        Transaction secondTransaction = new Transaction(2, sender, recepient, -400);
+        Transaction fistTransaction = new Transaction(sender, recepient, 200, 1);
+        Transaction secondTransaction = new Transaction(sender, recepient, -400, 2);
     }
 }

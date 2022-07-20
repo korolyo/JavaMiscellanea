@@ -1,10 +1,12 @@
-package ex03;
+package ex03.transaction;
+
+import ex03.user.User;
 
 import java.util.UUID;
 
 public class Transaction {
     private UUID id;
-    private User    recipient;
+    private User recipient;
     private User    sender;
     private String  transferCategory;
     private int     amount;
