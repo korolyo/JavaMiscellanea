@@ -8,7 +8,10 @@ public class Program {
         User sender = new User(1, "Dmytry", 500);
         User recepient = new User(2, "Saveliy", 1000);
 
-        Transaction fistTransaction = new Transaction(sender, recepient, 200, 1);
-        Transaction secondTransaction = new Transaction(sender, recepient, -400, 2);
+        Transaction firstTransaction = new Transaction(sender, recepient, 200, UUID.randomUUID());
+        Transaction secondTransaction = new Transaction(sender, recepient, -400, UUID.randomUUID());
+
+        System.out.println(firstTransaction.getAmount());
+        System.out.println(secondTransaction.getAmount());
     }
 }

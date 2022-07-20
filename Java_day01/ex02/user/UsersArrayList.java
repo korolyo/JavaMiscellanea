@@ -1,28 +1,33 @@
 package ex02.user;
 
-import java.util.ArrayList;
-import java.util.UUID;
+import ex02.UserNotFoundException;
+import ex02.user.UsersList;
+import ex02.user.User;
 
 public class UsersArrayList implements UsersList {
-    ArrayList<User> usersList = new ArrayList<User>();
+
+    private int arrayListLength = 10;
+    private User[] arrayList = new User[10];
+    private int num = 0;
 
     @Override
     public void addUser(User user) {
 
+
     }
 
     @Override
-    public User retrieveUserById(UUID id) {
-        return null;
+    public User getUserById(int id) throws UserNotFoundException {
+
     }
 
     @Override
-    public User retrieveUserByIndex(int index) {
-        return null;
+    public User getUserByIndex(int index) throws UserNotFoundException {
+
     }
 
     @Override
-    public int retrieveNumberOfUsers() {
-        return 0;
+    public int getNumberOfUsers() {
+        return num;
     }
 }

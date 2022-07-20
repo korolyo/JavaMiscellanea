@@ -44,7 +44,10 @@ public class Transaction {
     }
 
     public void setAmount(int amount) {
-        this.amount = amount;
+        if (category == TransferCategory.CREDIT && amount < 0)
+            this.amount = amount;
+        else if (category == TransferCategory.DEBIT && amount > 0)
+            this.amount = amount;
     }
 
     public TransferCategory getCategory() {
@@ -59,20 +62,12 @@ public class Transaction {
         this.identifier = identifier;
         this.recipient = recipient;
         this.sender = sender;
-        if (sender.getBalance() < amount && category == TransferCategory.CREDIT) {
+
+        if (sender.getBalance() < amount) {
             System.out.println("Sender don't have enough money");
             System.exit(0);
         }
-        if (sender.getBalance() < amount && category == TransferCategory.DEBIT) {
-            System.out.println("");
-        }
-        if (category == TransferCategory.DEBIT && amount < 0) {
-            System.out.println("Amount can't be negative");
-            System.exit(0);
-        }
-        if (category == TransferCategory.CREDIT && amount > 0) {
-            System.out.println("Amount can't be positive");
-            System.exit(0);
-        }
+
+        this.amount = amount;
     }
 }

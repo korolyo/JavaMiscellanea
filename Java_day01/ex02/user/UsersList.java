@@ -1,10 +1,8 @@
 package ex02.user;
 
-import java.util.UUID;
-
 public interface UsersList {
     public void addUser(User user);
-    public User retrieveUserById(UUID id);
-    public User retrieveUserByIndex(int index);
-    public int retrieveNumberOfUsers();
+    public User getUserById(int id) throws UserNotFoundException;
+    public User getUserByIndex(int index) throws UserNotFoundException;
+    public int getNumberOfUsers();
 }

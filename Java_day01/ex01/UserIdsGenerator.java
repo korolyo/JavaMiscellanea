@@ -3,7 +3,7 @@ package ex01;
 public final class UserIdsGenerator {
 
     private static UserIdsGenerator INSTANCE;
-    private static int id = 1;
+    private public int id = 1;
 
     public static UserIdsGenerator getInstance() {
         if (INSTANCE == null) {
